@@ -3,8 +3,9 @@
 #include <string>
 
 struct PluginAPI {
-    const char* name     = nullptr;
-    const char* version  = nullptr;
+    const char* name      = nullptr;
+    const char* version   = nullptr;
+    const char** commands = nullptr; // null-terminated list, e.g. {"ls", "cat", nullptr}
     void (*on_init)()                                = nullptr;
     void (*on_exit)()                                = nullptr;
     bool (*on_command)(const std::string& input)     = nullptr;
