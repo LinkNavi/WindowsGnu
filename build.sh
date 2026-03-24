@@ -3,4 +3,4 @@
 meson setup build
 meson compile -C build
 mkdir -p dist
-cp build/hello.so dist/hello.so
+cp build/WindowsGnu.so dist/WindowsGnu.so
